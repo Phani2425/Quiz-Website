@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Mania</title>
+    <link rel="stylesheet" href="dist/styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+         *{ 
+        Margin:0;
+        Padding:0;
+        Box-sizing: border-box;
+        Font-family: 'Poppins';
+        }
+        
+        html,body{
+        Width:100%;
+        Height:100%;
+        }
+        .wrapper{
+            background: rgb(2,0,36);
+            background: linear-gradient(131deg, rgba(2,0,36,1) 0%, rgba(170,62,217,1) 35%, rgba(0,212,255,1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper relative h-[100vh] w-[100vw] flex justify-center items-center">
+        <div class="quiz bg-white rounded-xl min-w-[700px] max-w-[900px] min-h-[450px] flex flex-col justify-between items-start shadow-2xl shadow-slate-800">
+            <div class="px-12 py-8">
+                <h1 id="quest" class="font-semibold text-3xl leading-7">Question</h1>
+            </div>
+            <hr class=" h-[1px] bg-black w-full">
+            <div class="px-9 py-6">
+                 <ul id="options">
+                     <li class="flex items-center justify-start gap-4 border border-gray-700 rounded-3xl px-5 py-2 min-w-[300px] font-normal text-base mb-4">
+                        <input type="radio" name="options" id="option_1" class="w-4 h-4 border">
+                        <label for="option_1">Option</label>
+                    </li>
+                     <li class="flex items-center justify-start gap-4 border border-gray-700 rounded-3xl px-5 py-2 min-w-[300px] font-normal text-base mb-4">
+                        <input type="radio" name="options" id="option_2" class="w-4 h-4 border">
+                        <label for="option_2">Option</label>
+                    </li>
+                     <li class="flex items-center justify-start gap-4 border border-gray-700 rounded-3xl px-5 py-2 min-w-[300px] font-normal text-base mb-4">
+                        <input type="radio" name="options" id="option_3" class="w-4 h-4 border">
+                        <label for="option_3">Option</label>
+                    </li>
+                     <li class="flex items-center justify-start gap-4 border border-gray-700 rounded-3xl px-5 py-2 min-w-[300px] font-normal text-base mb-4">
+                        <input type="radio" name="options" id="option_4" class="w-4 h-4 border">
+                        <label for="option_4">Option</label>
+                    </li>
+                 </ul>
+            </div>
+            <hr class="text-2px h-1 text-black w-full">
+            <div class="px-9 py-6">
+              <button id="submit" class="bg-blue-500 h-10 w-32 px-5 py-2 rounded-3xl text-white font-semibold">Submit</button>
+            </div>
+        </div>
+
+        <div class="scorecard hidden flex flex-col justify-evenly items-center gap-4 rounded-lg bg-white px-36 py-8">
+            <h1 id="scorehead" class="font-semibold text-2xl"></h1>
+            <h4>Congratulations on completing the quiz !!!!</h4>
+            <button id="play-again" class="bg-blue-500 h-10 w-32 px-5 py-2 rounded-3xl text-white font-semibold">Play Again</button>
+        </div>
+
+
+    </div>
+</body>
+</html>
